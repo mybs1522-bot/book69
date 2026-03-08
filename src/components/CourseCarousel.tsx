@@ -34,13 +34,13 @@ export const CourseCarousel: React.FC<CourseCarouselProps> = ({ onBuyClick }) =>
       <div className="hidden md:flex justify-end gap-2 mb-4 px-4 container mx-auto">
         <button 
           onClick={() => scroll('left')}
-          className="p-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+          className="p-3 rounded-full bg-white border border-slate-200 hover:bg-slate-50 transition-colors shadow-soft"
         >
           <ChevronLeft size={20} />
         </button>
         <button 
           onClick={() => scroll('right')}
-          className="p-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+          className="p-3 rounded-full bg-white border border-slate-200 hover:bg-slate-50 transition-colors shadow-soft"
         >
           <ChevronRight size={20} />
         </button>
@@ -59,7 +59,7 @@ export const CourseCarousel: React.FC<CourseCarouselProps> = ({ onBuyClick }) =>
               hoverEffect={true}
             >
               {/* Image Section */}
-              <div className="h-48 overflow-hidden relative bg-gray-800">
+              <div className="h-48 overflow-hidden relative bg-slate-100">
                 <div className={`absolute inset-0 bg-gradient-to-t ${course.color} opacity-20 z-10`} />
                 <img 
                   src={failedImages[course.id] ? fallbackImage : course.imageUrl} 
@@ -80,19 +80,19 @@ export const CourseCarousel: React.FC<CourseCarouselProps> = ({ onBuyClick }) =>
                   <Star size={14} className="text-yellow-400 fill-yellow-400" />
                   <Star size={14} className="text-yellow-400 fill-yellow-400" />
                   <Star size={14} className="text-yellow-400 fill-yellow-400" />
-                  <span className="text-xs text-gray-400 ml-1">(4.9)</span>
+                  <span className="text-xs text-slate-500 ml-1">(4.9)</span>
                 </div>
 
-                <h3 className="text-xl font-display font-bold leading-tight mb-2">
+                <h3 className="text-xl font-display font-bold leading-tight mb-2 text-slate-900">
                   {course.title}
                 </h3>
-                <p className="text-sm text-gray-400 line-clamp-3 mb-4 flex-1">
+                <p className="text-sm text-slate-600 line-clamp-3 mb-4 flex-1">
                   {course.description}
                 </p>
 
                 <button 
                   onClick={onBuyClick}
-                  className="w-full mt-auto py-3 bg-white/10 hover:bg-white/20 border border-white/10 rounded-lg text-sm font-semibold transition-all flex items-center justify-center gap-2 group-hover:border-brand-accent/50 group-hover:text-brand-accent"
+                  className="w-full mt-auto py-3 bg-slate-900 hover:bg-slate-800 border border-slate-900 rounded-lg text-sm font-semibold transition-all flex items-center justify-center gap-2 text-white group-hover:border-brand-accent/50 group-hover:text-brand-accent"
                 >
                   Start Learning <ArrowRight size={16} />
                 </button>

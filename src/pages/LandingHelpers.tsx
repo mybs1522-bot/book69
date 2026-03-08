@@ -115,8 +115,8 @@ export const AI_TRUTH = [
 /* ─── LOGO ─── */
 export const Logo = () => (
   <div className="flex flex-col items-center text-center cursor-pointer group" onClick={() => window.scrollTo(0, 0)}>
-    <span className="font-display font-bold text-lg tracking-tight leading-none text-white whitespace-nowrap">Avada</span>
-    <span className="text-[9px] font-medium uppercase tracking-widest text-zinc-500 whitespace-nowrap mt-1">Design & Architecture</span>
+    <span className="font-display font-bold text-lg tracking-tight leading-none text-slate-900 whitespace-nowrap">Avada</span>
+    <span className="text-[9px] font-medium uppercase tracking-widest text-slate-500 whitespace-nowrap mt-1">Design & Architecture</span>
   </div>
 );
 
@@ -131,7 +131,7 @@ export const CallToActionWidget = ({ timeLeft, onClick, headline, subtext }: { t
   const h = f(timeLeft.h), m = f(timeLeft.m), s = f(timeLeft.s);
   return (
     <div className="relative py-12 md:py-20 px-6 overflow-hidden">
-      <div className="absolute inset-0 bg-[#0d0d0d]"></div>
+      <div className="absolute inset-0 bg-slate-900"></div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-500/5 blur-[150px] rounded-full pointer-events-none"></div>
       <div className="max-w-2xl mx-auto relative z-10 text-center">
         {headline && <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-2 tracking-tight">{headline}</h3>}
@@ -182,11 +182,11 @@ export const SocialProofToast: React.FC = () => {
   const j = RAW_JOINERS[idx];
   return (
     <div className={`fixed bottom-20 left-4 z-[70] transition-all duration-500 ${visible ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}>
-      <div className="bg-zinc-900/95 backdrop-blur-xl border border-zinc-700 rounded-2xl px-5 py-3 shadow-2xl flex items-center gap-3 max-w-xs">
-        <div className="w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center shrink-0"><CheckCircle size={16} className="text-green-400" /></div>
+      <div className="bg-white/95 backdrop-blur-xl border border-slate-200 rounded-2xl px-5 py-3 shadow-2xl flex items-center gap-3 max-w-xs">
+        <div className="w-8 h-8 bg-emerald-50 rounded-full flex items-center justify-center shrink-0"><CheckCircle size={16} className="text-emerald-600" /></div>
         <div>
-          <p className="text-sm font-bold text-white">{j.name} from {j.city}</p>
-          <p className="text-xs text-zinc-400">just enrolled • {j.time}</p>
+          <p className="text-sm font-bold text-slate-900">{j.name} from {j.city}</p>
+          <p className="text-xs text-slate-500">just enrolled • {j.time}</p>
         </div>
       </div>
     </div>
